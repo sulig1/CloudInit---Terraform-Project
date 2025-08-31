@@ -14,3 +14,9 @@ output "default_vpc_id" {
   value = data.aws_vpc.vpc.id
 }
 
+variable "ip_address" {
+  description = "my IP address"
+  type = string
+  
+  
+}

@@ -17,11 +17,11 @@ resource "aws_security_group" "CloudInit-sg" {
   }
 
   ingress {
-    description      = "Allows SSH from anywhere (test)"
+    description      = "Allows SSH from my IP"
     from_port        = 22
     to_port          = 22
     protocol         = "tcp"
-    cidr_blocks      = ["0.0.0.0/0"] # Allow traffic from all ssh
+    cidr_blocks      = [var.ip_address] # Allow only my IP
   }
 
   egress { 

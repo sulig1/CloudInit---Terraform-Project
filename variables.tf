@@ -32,3 +32,9 @@ variable "sg_id" {
     
   
 }
+
+variable "ip_address" {
+  description = "my public ip"
+  type = string
+
+}

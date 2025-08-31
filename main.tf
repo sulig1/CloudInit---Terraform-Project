@@ -1,5 +1,6 @@
 module "security" {
     source = "./modules/security"
+    ip_address = var.ip_address
 
 }
 
