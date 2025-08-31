@@ -1,11 +1,11 @@
-# 🚀 Cloud-Init EC2 Automation with Terraform
+#  Cloud-Init EC2 Automation with Terraform
 
 This project demonstrates how to use Terraform and cloud-init to provision and configure an EC2 instance automatically on AWS.  
 The goal is to show how infrastructure provisioning (Terraform) and instance bootstrapping (cloud-init) can work together to create a repeatable and automated environment.
 
 ---
 
-## 📖 What is Cloud-Init?
+##  What is Cloud-Init?
 
 Cloud-init is a widely used tool for initializing cloud instances during boot. It allows you to:  
 
@@ -18,7 +18,7 @@ In this project, cloud-init installs and configures Docker, ensuring that the EC
 
 ---
 
-## ⚡ Features
+##  Features
 
 - Automated provisioning of an EC2 instance with Terraform  
 - Security group configured for HTTP and restricted SSH (only my IP) access  
@@ -28,7 +28,7 @@ In this project, cloud-init installs and configures Docker, ensuring that the EC
 
 ---
 
-## 🔒 Security Notes
+##  Security Notes
 
 - Always store AWS credentials securely (use environment variables or AWS Vault)  
 - Do not commit your `.tfvars` file with sensitive values  
@@ -36,7 +36,7 @@ In this project, cloud-init installs and configures Docker, ensuring that the EC
 
   ---
 
-## 🌱 Future Improvements
+##  Future Improvements
 
 Currently, cloud-init installs and starts Docker.  
 Future enhancements could include:  
@@ -44,12 +44,11 @@ Future enhancements could include:
 - Extending cloud-init to auto-deploy applications like:  
   - A WordPress container (accessible via the instance’s public IP)  
   - An NGINX container serving a static webpage  
-- Adding outputs for deployed application URLs  
-- Integrating CI/CD to automatically test Terraform plans  
+- Adding outputs for deployed application URLs    
 
 ---
 
-## ✨ Learning Note
+##  Learning Note
 
 This project is part of my DevOps learning journey.  
 
