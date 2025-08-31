@@ -1,6 +1,6 @@
 resource "aws_security_group" "CloudInit-sg" {
   name        = "cloudinit-sg"
-  description = "Allows all hhtp and SSh traffic (for testing)"
+  description = "Allows hhtp and SSh (my IP traffic "
   vpc_id      =   data.aws_vpc.vpc.id
 
 
