@@ -1,0 +1,6 @@
+#cloud-config
+packages:
+  - docker
+runcmd:
+  - systemctl enable docker
+  - systemctl start docker

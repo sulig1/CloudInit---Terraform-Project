@@ -1,0 +1,39 @@
+resource "aws_security_group" "CloudInit-sg" {
+  name        = "cloudinit-sg"
+  description = "Allows all hhtp and SSh traffic (for testing)"
+  vpc_id      =   data.aws_vpc.vpc.id
+
+
+  
+
+
+  ingress {
+    description      = "Allows http traffic"
+    from_port        = 80
+    to_port          = 80
+    protocol         = "tcp"
+    cidr_blocks      = ["0.0.0.0/0"]
+    
+  }
+
+  ingress {
+    description      = "Allows SSH from anywhere (test)"
+    from_port        = 22
+    to_port          = 22
+    protocol         = "tcp"
+    cidr_blocks      = ["0.0.0.0/0"] # Allow traffic from all ssh
+  }
+
+  egress { 
+    from_port        = 0
+    to_port          = 0
+    protocol         = "-1" #Allows all protocol
+    cidr_blocks      = ["0.0.0.0/0"]
+   
+  }
+
+
+  tags = {
+    Name = var.sg-name
+  }
+}
