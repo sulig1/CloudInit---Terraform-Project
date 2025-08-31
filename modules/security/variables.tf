@@ -5,7 +5,7 @@ variable "sg-name" {
   
 }
 
-#locates default vpc for aws user
+
 data "aws_vpc" "vpc" {
   default = true
 }
@@ -17,6 +17,6 @@ output "default_vpc_id" {
 variable "ip_address" {
   description = "my IP address"
   type = string
-  
+
   
 }
